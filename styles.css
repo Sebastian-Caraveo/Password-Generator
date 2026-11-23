@@ -669,3 +669,373 @@ h1 span {
     transition-duration: .01ms !important;
   }
 }
+
+:root {
+  --ink: #171717;
+  --muted: #4a4a4a;
+  --green: #176b32;
+  --green-dark: #0e5425;
+  --green-soft: #d3ded3;
+  --line: #808080;
+  --surface: #c0c0c0;
+  --page: #008080;
+  --display-font: Georgia, "Times New Roman", serif;
+  --body-font: Tahoma, Arial, sans-serif;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--body-font);
+  -webkit-font-smoothing: auto;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px dotted #000;
+  outline-offset: 3px;
+}
+
+.brand,
+.brand-mark,
+.header-note,
+.site-footer {
+  color: #fff;
+}
+
+.brand {
+  font-family: var(--body-font);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  color: #fff;
+}
+
+.brand-period {
+  color: #f4dc79;
+}
+
+.status-dot {
+  border-radius: 0;
+  background: #8bd76e;
+  box-shadow: 0 0 0 2px rgb(255 255 255 / 28%);
+}
+
+.generator {
+  width: min(100%, 540px);
+}
+
+.eyebrow {
+  color: #b6e3c2;
+  font-family: var(--body-font);
+  letter-spacing: 1.3px;
+}
+
+h1 {
+  color: #fff;
+  font-family: var(--display-font);
+  font-weight: 700;
+  letter-spacing: -.8px;
+}
+
+h1 span {
+  color: #f4dc79;
+}
+
+.intro-copy {
+  color: #d4e5e3;
+}
+
+.generator-card {
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow:
+    inset 1px 1px #dfdfdf,
+    inset -1px -1px #808080,
+    4px 5px 0 rgb(0 0 0 / 22%);
+}
+
+.generator-card::before {
+  display: block;
+  padding: 7px 10px;
+  background: #000080;
+  color: #fff;
+  content: "KINDRED PASSWORD GENERATOR";
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.password-panel {
+  padding: 20px 22px 16px;
+  border-bottom: 2px solid;
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
+  background: #101a14;
+}
+
+.panel-label,
+.character-options legend {
+  color: #b1c6b5;
+  font-family: var(--body-font);
+  letter-spacing: .5px;
+}
+
+.local-badge {
+  color: #b1c6b5;
+}
+
+.local-badge svg {
+  stroke: #b1c6b5;
+}
+
+.password-output {
+  color: #c2f28b;
+  font-size: clamp(15px, 3.1vw, 19px);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.password-output.is-empty {
+  color: #90a795;
+}
+
+.copy-button,
+.length-value {
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #171717;
+  font-family: var(--body-font);
+  box-shadow: inset 1px 1px #dfdfdf;
+  transition: none;
+}
+
+.copy-button {
+  width: 35px;
+  height: 35px;
+  flex-basis: 35px;
+}
+
+.copy-button:hover:not(:disabled) {
+  border-color: #fff #404040 #404040 #fff;
+  background: #d5d5d5;
+  color: #000;
+}
+
+.copy-button:active:not(:disabled) {
+  border-color: #404040 #fff #fff #404040;
+}
+
+.strength-caption,
+.strength-label {
+  color: #b1c6b5;
+}
+
+.strength-meter {
+  gap: 2px;
+}
+
+.meter-segment {
+  height: 6px;
+  border-radius: 0;
+  background: #536057;
+}
+
+.strength-meter[data-level="1"] .meter-segment:nth-child(-n + 1) {
+  background: #df8372;
+}
+
+.strength-meter[data-level="2"] .meter-segment:nth-child(-n + 2) {
+  background: #e5b64e;
+}
+
+.strength-meter[data-level="3"] .meter-segment:nth-child(-n + 3) {
+  background: #8db965;
+}
+
+.strength-meter[data-level="4"] .meter-segment {
+  background: #8bd76e;
+}
+
+.strength-label[data-level="1"] {
+  color: #ff9a84;
+}
+
+.strength-label[data-level="2"] {
+  color: #f2ce75;
+}
+
+.strength-label[data-level="3"],
+.strength-label[data-level="4"] {
+  color: #a5e98a;
+}
+
+.options {
+  background: #c0c0c0;
+}
+
+.section-heading h2 {
+  font-family: var(--display-font);
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.settings-note,
+.range-ends {
+  color: #555;
+}
+
+.length-heading label {
+  color: #222;
+}
+
+.length-value {
+  min-width: 40px;
+  height: 28px;
+  font-family: var(--body-font);
+  font-size: 12px;
+}
+
+.length-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border: 1px solid #808080;
+  border-radius: 0;
+  background: linear-gradient(to right, #000080 var(--slider-progress, 27%), #dfdfdf var(--slider-progress, 27%));
+}
+
+.length-slider::-moz-range-track {
+  height: 6px;
+  border: 1px solid #808080;
+  border-radius: 0;
+  background: #dfdfdf;
+}
+
+.length-slider::-moz-range-progress {
+  height: 6px;
+  border-radius: 0;
+  background: #000080;
+}
+
+.length-slider::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  margin-top: -5px;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow: inset 1px 1px #dfdfdf;
+}
+
+.length-slider::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow: inset 1px 1px #dfdfdf;
+}
+
+.option-card {
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+  border-radius: 0;
+  background: #c0c0c0;
+  transition: none;
+}
+
+.option-card:hover,
+.option-card:has(input:checked) {
+  border-color: #808080 #fff #fff #808080;
+  background: #c0c0c0;
+}
+
+.custom-check {
+  border: 2px inset #dfdfdf;
+  border-radius: 0;
+  background: #fff;
+  color: transparent;
+  transition: none;
+}
+
+.option-card input:checked + .custom-check {
+  border-color: #808080;
+  background: #000080;
+  color: #fff;
+}
+
+.option-name {
+  color: #171717;
+  font-family: var(--body-font);
+  font-weight: 500;
+}
+
+.option-sample {
+  color: #555;
+}
+
+.message {
+  color: #8b160e;
+}
+
+.generate-button {
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #111;
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: inset 1px 1px #dfdfdf;
+  transition: none;
+}
+
+.generate-button:hover {
+  background: #d5d5d5;
+  box-shadow: inset 1px 1px #fff;
+}
+
+.generate-button:active {
+  transform: none;
+  border-color: #404040 #fff #fff #404040;
+  box-shadow: inset 1px 1px #808080;
+}
+
+.button-shortcut {
+  border: 1px solid #808080;
+  border-radius: 0;
+  color: #222;
+  font-family: "Courier New", monospace;
+}
+
+.privacy-note {
+  color: #e0efed;
+}
+
+.privacy-note svg {
+  color: #f4dc79;
+}
+
+@media (max-width: 600px) {
+  .generator {
+    padding-top: 40px;
+    padding-bottom: 38px;
+  }
+
+  .password-panel {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}
